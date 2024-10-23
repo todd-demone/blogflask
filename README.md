@@ -29,7 +29,7 @@ cp sample.env .env
 python app.py
 ```
 
-Note to self:
+## Notes:
 To install a library:
 ```
 pip install markdown
