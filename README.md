@@ -1,4 +1,4 @@
-# blogflask
+# My Flask Blog
 
 1. Create and activate a venv virtual environment (using python 3.12)
 ```
