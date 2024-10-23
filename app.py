@@ -1,8 +1,11 @@
 from flask import Flask, request, render_template
-import smtplib
 import markdown
-from email.mime.text import MIMEText
 import os
+from dotenv import load_dotenv
+import smtplib
+from email.mime.text import MIMEText
+
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -19,7 +22,7 @@ def send_email():
     message = request.form['message']
 
     # Set up your email details
-    to_email = 'your-email@example.com'  # Replace with your email
+    to_email = os.getenv('EMAIL_USER')
     subject = 'New Contact Form Submission'
     
     body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
@@ -32,9 +35,9 @@ def send_email():
 
     # Send the email
     try:
-        with smtplib.SMTP('smtp.example.com', 587) as server:  # Replace with your SMTP server
+        with smtplib.SMTP(os.getenv('SMTP_SERVER'), int(os.getenv('SMTP_PORT'))) as server:
             server.starttls()
-            server.login('your-email@example.com', 'your-email-password')  # Use app password if using Gmail
+            server.login(os.getenv('EMAIL_USER'), os.getenv('EMAIL_PASS'))  # Use email from env
             server.sendmail(email, to_email, msg.as_string())
         return "Thank you for your message!"
     except Exception as e:
