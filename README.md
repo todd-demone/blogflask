@@ -11,7 +11,7 @@ source venv/bin/activate
 
 2. Clone the repo
 ```
-git clone ...
+git clone git@github.com:todd-demone/blogflask.git
 ```
 
 3. Install the dependencies
