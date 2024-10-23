@@ -1,11 +1,21 @@
 # My Flask Blog
 
-1. Create and activate a venv virtual environment (using python 3.12)
+1. Install python3.10
+```
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.10
+python3.10 --version
+```
+
+1. Create and activate a venv virtual environment (using python 3.10)
 ```
 cd ~
 mkdir blogflask
 cd blogflask
-python3.12 -m venv venv
+python3.10 -m venv venv
 source venv/bin/activate
 ```
 
@@ -30,7 +40,7 @@ python app.py
 ```
 
 ## Notes:
-To install a library:
+To install a library, e.g.:
 ```
 pip install markdown
 ```
