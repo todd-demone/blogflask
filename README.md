@@ -10,7 +10,7 @@ sudo apt install python3.10
 python3.10 --version
 ```
 
-1. Create and activate a venv virtual environment (using python 3.10)
+2. Create and activate a venv virtual environment (using python 3.10)
 ```
 cd ~
 mkdir blogflask
@@ -19,22 +19,22 @@ python3.10 -m venv venv
 source venv/bin/activate
 ```
 
-2. Clone the repo
+3. Clone the repo
 ```
 git clone git@github.com:todd-demone/blogflask.git
 ```
 
-3. Install the dependencies
+4. Install the dependencies
 ```
 pip install -r requirements.txt
 ```
 
-4. Copy sample.env to .env and make necessary changes (need an app password if using google for email)
+5. Copy sample.env to .env and make necessary changes (need an app password if using google for email)
 ```
 cp sample.env .env
 ```
 
-5. Run the app
+6. Run the app
 ```
 python app.py
 ```
