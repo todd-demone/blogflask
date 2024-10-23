@@ -19,7 +19,12 @@ git clone ...
 pip install -r requirements.txt
 ```
 
-4. Run the app
+4. Copy sample.env to .env
+```
+cp sample.env .env
+```
+
+5. Run the app
 ```
 python app.py
 ```
