@@ -19,7 +19,7 @@ git clone git@github.com:todd-demone/blogflask.git
 pip install -r requirements.txt
 ```
 
-4. Copy sample.env to .env
+4. Copy sample.env to .env and make necessary changes (need an app password if using google for email)
 ```
 cp sample.env .env
 ```
