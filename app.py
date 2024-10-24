@@ -68,7 +68,7 @@ def send_email():
             server.starttls()
             server.login(os.getenv('EMAIL_USER'), os.getenv('EMAIL_PASS'))  # Use email from env
             server.sendmail(email, to_email, msg.as_string())
-        return "Thank you for your message!"
+        return render_template('message-sent.html')
     except Exception as e:
         return f"There was a problem sending your message: {str(e)}"
     
