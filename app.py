@@ -13,7 +13,8 @@ BLOG_DIR = 'blog'
 
 @app.route('/')
 def home():
-    return redirect("/blog", code=302)
+    return render_template('home.html')
+    # return redirect("/blog", code=302)
 
 @app.route('/blog')
 def blog():
